@@ -1,0 +1,38 @@
+using System;
+
+
+namespace SimpleConditions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = int.Parse(Console.ReadLine());
+            int sumleft = 0;
+            int sumright = 0;
+
+            for (int i = 0; i < count*2; i++)
+            {
+                int num = int.Parse(Console.ReadLine());
+                if (i<count)
+                {
+                    sumleft += num;
+                }
+                else
+                {
+                    sumright += num;
+                }
+            }
+            if (sumright == sumleft)
+            {
+                Console.WriteLine("Yes, sum = {0}", sumright);
+            }
+            else
+            {
+                int dif = sumright - sumleft;
+                dif = Math.Abs(dif);
+                Console.WriteLine("No diff, {0}", dif);
+            }
+        }
+    }
+}
