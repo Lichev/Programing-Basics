@@ -1,0 +1,33 @@
+using System;
+
+
+namespace SimpleConditions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string project = Console.ReadLine().ToLower();
+            int r = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            double mesta = r * c;
+            
+            if (project == "premiere")
+            {
+                Console.WriteLine("{0:f2} leva", mesta * 12);
+            }
+            else if (project == "normal")
+            {
+                Console.WriteLine("{0:f2} leva", mesta * 7.50);
+            }
+            else if (project == "discount")
+            {
+                Console.WriteLine("{0:f2} leva", mesta * 5);
+            }
+            else
+            {
+                Console.WriteLine("unkown");
+            }
+        }
+    }
+}

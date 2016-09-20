@@ -1,0 +1,34 @@
+using System;
+
+
+namespace SimpleConditions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string year = Console.ReadLine().ToLower();
+            double p = double.Parse(Console.ReadLine());
+            double h = double.Parse(Console.ReadLine());
+            double allweeknd = 48.0;
+            var sofiaweeknd = (allweeknd - h) * (3.0 / 4);
+            var notsofia = h;
+            var happyday = p * (2.0 / 3);
+            var result = sofiaweeknd + notsofia + happyday;
+            var leapyear = result * 1.15;
+
+            if (year == "normal")
+            {
+                Console.WriteLine(Math.Truncate(result));
+            }
+            else if (year == "leap")
+            {
+                Console.WriteLine(Math.Truncate(leapyear));
+            }
+            else
+            {
+                Console.WriteLine("unknown");
+            }
+        }
+    }
+}
